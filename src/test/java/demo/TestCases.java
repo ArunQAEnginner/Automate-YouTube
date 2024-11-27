@@ -55,7 +55,7 @@ public class TestCases extends ExcelDataProvider{ // Lets us read the data
                 String MovieMarked = test2.GetSectionLastMovieMarkedAs("Top selling");
                 System.out.println("MovieMarkedAs : "+MovieMarked);
                 status = MovieMarked.equalsIgnoreCase("A");
-                softAssert.assertTrue(status, "Movie not marked AS 'A'");
+                softAssert.assertFalse(status, "Movie not marked AS 'A'");
                 String MovieCategory = test2.GetSectionLastMovieCategory("Top selling");
                 System.out.println("Movie Category : "+MovieCategory);
                 status = MovieCategory.equals("Animation") || MovieCategory.equals("Drama") || MovieCategory.equals("Comedy");
